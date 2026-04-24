@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual personagem de Invencível você seria?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TELA INICIAL -->
+    <div id="telaInicial">
+        <div class="hero-bg"></div>
+        <div class="container-inicial">
+            <div class="logo-titulo">
+                <span class="icone-universo">🌌</span>
+                <h1>UNIVERSO<br><span class="destaque">INVENCÍVEL</span></h1>
+            </div>
+            <p class="subtitulo">Bem-vindo ao universo dos Viltrumitas!</p>
+            <p class="descricao">
+                Em um mundo onde seres com poderes extraordinários moldam o destino da humanidade,
+                três nomes se destacam acima de todos: <strong>Omni-Man</strong>, o guerreiro leal ao
+                legado de Viltrum; <strong>Thragg</strong>, o líder supremo implacável; e
+                <strong>Invencível</strong>, o jovem herói dividido entre dois mundos.
+                <br><br>
+                Responda 10 perguntas e descubra qual desses poderosos personagens
+                melhor representa a sua essência!
+            </p>
+            <button id="btnIniciar" onclick="iniciarQuiz()">⚡ DESCOBRIR MEU PERSONAGEM</button>
+        </div>
+    </div>
+
+    <!-- TELA DO QUIZ -->
+    <div id="telaQuiz" class="oculto">
+        <div class="quiz-header">
+            <h2>🌌 UNIVERSO INVENCÍVEL</h2>
+            <div class="progresso-container">
+                <span id="numeroQuestao">Pergunta 1 de 10</span>
+                <div class="barra-progresso">
+                    <div id="barraFill" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quiz-corpo">
+            <h3 id="textoPergunta"></h3>
+            <div id="opcoesContainer"></div>
+            <button id="btnProximo" class="oculto" onclick="proximaPergunta()">PRÓXIMA →</button>
+        </div>
+    </div>
+
+    <!-- TELA DE RESULTADO -->
+    <div id="telaResultado" class="oculto">
+        <div class="resultado-container">
+            <h2>🏆 SEU PERSONAGEM É...</h2>
+            <div id="imagemPersonagem" class="imagem-personagem"></div>
+            <h1 id="nomePersonagem"></h1>
+            <p id="descricaoPersonagem"></p>
+            <div id="pontuacaoContainer" class="pontuacao-box"></div>
+            <button onclick="reiniciarQuiz()">🔄 JOGAR NOVAMENTE</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
